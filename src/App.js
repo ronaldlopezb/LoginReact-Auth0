@@ -10,12 +10,10 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        
-        
-          <LoginButton />
-        
         <Profile />
-        <LogoutButton />
+        {
+          isAuthenticated ? <LogoutButton /> : <LoginButton />
+        }
       </header>
     </div>
   );
